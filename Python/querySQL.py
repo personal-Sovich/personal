@@ -21,9 +21,9 @@ for i in mycursor:
 
 # Pulling data from database
 mycursor.execute("""
-    SELECT * 
+    SELECT first_name, last_name 
     FROM actor 
-    WHERE first_name = 'John'
+    WHERE first_name = 'James'
     LIMIT 10
     """)
 pandas_df = pd.DataFrame(mycursor.fetchall())
